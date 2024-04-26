@@ -81,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-are-the-coefficentsodds-ratiosand-percent-change-to-odds" id="toc-what-are-the-coefficentsodds-ratiosand-percent-change-to-odds" class="nav-link active" data-scroll-target="#what-are-the-coefficentsodds-ratiosand-percent-change-to-odds">What are the coefficents/odds ratios/and percent change to odds?</a></li>
+  <li><a href="#how-do-i-get-coefficentsodds-ratiosand-percent-change-to-odds-from-a-logit" id="toc-how-do-i-get-coefficentsodds-ratiosand-percent-change-to-odds-from-a-logit" class="nav-link active" data-scroll-target="#how-do-i-get-coefficentsodds-ratiosand-percent-change-to-odds-from-a-logit">How do I get coefficents/odds ratios/and percent change to odds from a logit?</a></li>
   <li><a href="#how-do-i-get-the-p-value-for-the-model-chi2" id="toc-how-do-i-get-the-p-value-for-the-model-chi2" class="nav-link" data-scroll-target="#how-do-i-get-the-p-value-for-the-model-chi2">How do I get the P-value for the model <span class="math inline">\(\chi^2\)</span>?</a></li>
   <li><a href="#how-do-i-update-the-design-data" id="toc-how-do-i-update-the-design-data" class="nav-link" data-scroll-target="#how-do-i-update-the-design-data">How do I update the design data?</a></li>
   <li><a href="#why-is-the-predict-function-giving-me-an-error-like-arguments-imply-differing-number-of-rows-or-newdata-had-x-rows-but-variables-found-have-x-rows" id="toc-why-is-the-predict-function-giving-me-an-error-like-arguments-imply-differing-number-of-rows-or-newdata-had-x-rows-but-variables-found-have-x-rows" class="nav-link" data-scroll-target="#why-is-the-predict-function-giving-me-an-error-like-arguments-imply-differing-number-of-rows-or-newdata-had-x-rows-but-variables-found-have-x-rows">Why is the predict function giving me an error like “arguments imply differing number of rows…” or “‘newdata’ had X rows but variables found have X rows”?</a></li>
@@ -110,8 +110,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="what-are-the-coefficentsodds-ratiosand-percent-change-to-odds" class="level1">
-<h1>What are the coefficents/odds ratios/and percent change to odds?</h1>
+<section id="how-do-i-get-coefficentsodds-ratiosand-percent-change-to-odds-from-a-logit" class="level1">
+<h1>How do I get coefficents/odds ratios/and percent change to odds from a logit?</h1>
 <p>Remember that the output from <code>summary</code> is showing you the effect of a one unit increase in X on the logged odds of <span class="math inline">\(Y=1\)</span>. Logit coefficients can take on any value from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>. An odds ratio of 0 means there is no effect of X on Y.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">=</span> <span class="fu">glm</span>(Y <span class="sc">~</span> X1 <span class="sc">+</span> X2, <span class="at">family=</span>binomial, <span class="at">data=</span>fakedata)</span>
@@ -767,7 +767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># What are the coefficents/odds ratios/and percent change to odds?</span></span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># How do I get coefficents/odds ratios/and percent change to odds from a logit?</span></span>
 <span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>Remember that the output from <span class="in">`summary`</span> is showing you the effect of a one unit increase in X on the logged odds of $Y=1$. Logit coefficients can take on any value from $-\infty$ to $\infty$. An odds ratio of 0 means there is no effect of X on Y.</span>
 <span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a></span>
